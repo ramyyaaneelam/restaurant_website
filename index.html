@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spice Delight</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <h1 class="logo">Spice Delight</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button onclick="openLogin()">Login</button></li>
+      <li><button onclick="toggleDarkMode()">🌙</button></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section id="home" class="hero">
+  <div class="overlay">
+    <h2>Welcome to Spice Delight</h2>
+    <p>Best Vegetarian Food in Town</p>
+    <button onclick="scrollToMenu()">Order Now</button>
+  </div>
+</section>
+
+<!-- Menu -->
+<section id="menu">
+  <h2>Our Menu</h2>
+  <div class="menu-container" id="menuList"></div>
+</section>
+
+<!-- Cart -->
+<div class="cart">
+  <h3>Cart 🛒</h3>
+  <ul id="cartItems"></ul>
+  <p id="total">Total: ₹0</p>
+  <button onclick="openOrder()">Place Order</button>
+</div>
+
+<!-- Gallery -->
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc">
+    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0">
+    <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398">
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: spicedelight@gmail.com</p>
+  <p>Phone: +91 9876543210</p>
+</section>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeLogin()" class="close">&times;</span>
+    <h2>Login</h2>
+    <input type="text" placeholder="Username"><br><br>
+    <input type="password" placeholder="Password"><br><br>
+    <button>Login</button>
+  </div>
+</div>
+
+<!-- Order Modal -->
+<div id="orderPopup" class="modal">
+  <div class="modal-content">
+    <span onclick="closeOrder()" class="close">&times;</span>
+    <h2>Place Order</h2>
+    <input type="text" placeholder="Your Name"><br><br>
+    <input type="text" placeholder="Address"><br><br>
+    <button onclick="confirmOrder()">Confirm Order</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

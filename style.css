@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f8f8f8;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+header {
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+  padding: 15px;
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 10px;
+}
+
+nav a, nav button {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
+  color: white;
+  border-radius: 10px;
+}
+
+/* Menu */
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 220px;
+  margin: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.item img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.item:hover {
+  transform: translateY(-10px);
+}
+
+.item button {
+  background: #ff512f;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Cart */
+.cart {
+  position: fixed;
+  right: 0;
+  top: 100px;
+  background: white;
+  padding: 10px;
+  width: 200px;
+  border-left: 3px solid #ff512f;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  background: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  margin: 10% auto;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+}
+
+/* Dark mode */
+.dark {
+  background: #111;
+  color: white;
+}
+/* Cart buttons */
+.cart {
+  position: fixed;
+  right: -300px;   /* hidden */
+  top: 100px;
+  background: white;
+  padding: 15px;
+  width: 250px;
+  border-radius: 10px 0 0 10px;
+  box-shadow: -5px 5px 15px rgba(0,0,0,0.2);
+  transition: 0.4s;
+}
+
+/* Tracking box */
+.tracking {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #222;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
